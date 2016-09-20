@@ -22,6 +22,9 @@ namespace ZOO
 
 
             Cazare cazare = new Cazare();
+
+            OperatiiZOO operatii = new OperatiiZOO();
+            operatii.AducereAnimalZoo(leu);
            
             Cazare.Custi[0][0] = leu;
             /*

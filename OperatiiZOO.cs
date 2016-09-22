@@ -8,22 +8,40 @@ namespace ZOO
 {
     class OperatiiZOO
     {
-        List<Animal> AnimaleInAspteptare { get; set; }
+        public OperatiiZOO()
+        {
+            animaleInAspteptare = new List<Animal>();
+        }
+
+        private List<Animal> animaleInAspteptare { get; set; }
 
         public void AducereAnimalZoo(Animal animal)
         {
-            
-            try
+            if (animal != null)
             {
-                AnimaleInAspteptare.Add(animal);
-            }
-            catch (Exception ex)
-            {
+                try
+                {
+                    animaleInAspteptare.Add(animal);
+                }
+                catch (NullReferenceException ex)
+                {
 
-                Console.WriteLine(ex); ;
+                    Console.WriteLine(ex); ;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Mesaj din al doilea Catch {0}", ex);
+                }
+                //finally
+                //{
+                //    Console.WriteLine("Mesaj din finally");
+                //}
             }
-            
+        } 
+        public void AlocareCusca()
+        {
 
         }
+
     }
 }

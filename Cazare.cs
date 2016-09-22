@@ -19,6 +19,7 @@ namespace ZOO
 
         private void ConstruireCustiZoo()
         {
+            Console.WriteLine("Pentru a avea ZOO trebuie mai intai construite custile. Sa le cream!");
             Custi = new List<List<Animal>>();
             Console.Write("Introduceti numarul de randuri pentru custi: ");
             int nrRand = Convert.ToInt32(Console.ReadLine());

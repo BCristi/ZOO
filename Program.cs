@@ -23,13 +23,6 @@ namespace ZOO
             leu.TaraProvenienta = "Romania";
             leu.TempMinima = 10;
 
-
-            
-
-            
-            
-            
-           
             //Cazare.Custi[0][0] = leu;
 
             bool ales = true;
@@ -39,6 +32,7 @@ namespace ZOO
                 Console.WriteLine("Alegeti optiunea:");
                 Console.WriteLine("1 - Adaugare animale in ZOO");
                 Console.WriteLine("2 - Alocare cusca");
+                Console.WriteLine("3 - TEst");
                 Console.WriteLine("0 - Iesire");
                 optiune = Console.ReadLine();
                 switch (optiune)
@@ -48,6 +42,9 @@ namespace ZOO
                         break;
                     case "2":
 
+                        break;
+                    case "3":
+                        operatii.TipAnimal();
                         break;
 
                     case "0":

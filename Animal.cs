@@ -18,7 +18,6 @@ namespace ZOO
         public int CantitateHranaPeZi { get; set; }
         //care este diferenta intre declararea unei prop ca mai sus si: int IAnimal.CantitateHranaPeZi { get; set; }
 
-        
 
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -38,6 +39,42 @@ namespace ZOO
                 //}
             }
         } 
+
+        public void TipAnimal()
+        {
+
+            Console.WriteLine("Tipuri de animale disponibile");
+            var animale = AppDomain.CurrentDomain.GetAssemblies()
+                       .SelectMany(assembly => assembly.GetTypes())
+                       .Where(type => type.IsSubclassOf(typeof(Animal)));
+            foreach (var animal in animale)
+            {
+                Console.Write(animal.Name);
+                Console.Write("  ");
+            }
+
+            Console.Write("Alegeti tipul de animal pe care doriti sa il aduceti in ZOO, din lista disponibila:");
+
+            string optiune = Console.ReadLine();
+
+            switch (optiune)
+            {
+                case "Iepure":
+                    Iepure iepure = new Iepure();
+                    Console.WriteLine("Cantitate hrana pe zi:");
+                    iepure.CantitateHranaPeZi = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Data aducerii");
+                    iepure.DataAducerii = Convert.ToDateTime(Console.ReadLine());
+                    
+
+                    break;
+                default:
+                    break;
+            }
+
+
+        }
+
         public void AlocareCusca()
         {
 

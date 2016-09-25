@@ -23,7 +23,11 @@ namespace ZOO
             leu.TaraProvenienta = "Romania";
             leu.TempMinima = 10;
 
-            //Cazare.Custi[0][0] = leu;
+            //var animaux = new CumparareAnimale<Iepure>();
+            //animaux.ParticularitatiAnimal();
+
+            Cazare.Custi[0][0] = leu;
+            Cazare.Custi[1][1] = leu;
 
             bool ales = true;
             string optiune;
@@ -38,13 +42,13 @@ namespace ZOO
                 switch (optiune)
                 {
                     case "1":
-                        operatii.AducereAnimalZoo(leu);
+                        operatii.AducereAnimalZoo(null);
                         break;
                     case "2":
-
+                        operatii.AlocareCusca();
                         break;
                     case "3":
-                        operatii.TipAnimal();
+                       // cazare.ListareCustiDisponibile();
                         break;
 
                     case "0":
